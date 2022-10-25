@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/admin/customers.css">
+    <title>New Customer</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="form">
+        <h2>New Customer</h2>
+        <div class="inputbox">
+          <span>Surname</span>
+          <input type="text" required="required" id="surname"/>
+          <i></i>
+        </div>
+        <div class="inputbox">
+          <span>Email</span>
+            <input id="email" type="text" required="required">
+            <i></i>
+        </div>
+        <div class="inputbox">
+            <span>Password</span>
+            <input type="password" required="required" id="password" />
+            <i></i>
+          </div>
+        <div class="inputbox">
+          <span>Images</span>
+          <input type="file" multiple onchange="chooseFile(event)" required="required" id="file" />
+          <i></i>
+        </div>
+        <output id="result"></output>
+        <input onclick="newCustomer()" type="submit" value="Create and Upload" />
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="../js/firebase/firebase.js"></script>
+  </body>
+</html>
